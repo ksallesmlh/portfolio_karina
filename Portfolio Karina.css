@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+
+/* ===================================================
+   1. PALETTE DE COULEURS & VARIABLES (CAMOUFLAGE CHIC)
+   =================================================== */
+:root {
+    --bg-color: #f5f7f2;        /* Fond clair, doux et lumineux */
+    --card-bg: #ffffff;         /* Fond blanc pur pour les cartes */
+    --accent-color: #2e4d27;    /* Vert armée / gendarmerie chic */
+    --accent-light: #416d38;    /* Vert au survol */
+    --gold-chic: #b89753;       /* Doré (galon / insigne) */
+    --text-color: #1a2419;      /* Texte foncé ultra lisible */
+    --text-muted: #556b53;      /* Texte secondaire vert-gris */
+    --border-color: #d1dcd0;    /* Bordure claire et propre */
+}
+
+/* RESET DE BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ===================================================
+   2. TYPOGRAPHIE, TITRES CENTRÉS & SURLIGNAGE
+   =================================================== */
+h2, h2.titre-section {
+    text-align: center;
+    color: var(--accent-color);
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sous-titre-cat {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.sous-titre-subcat {
+    text-align: center;
+    color: var(--gold-chic);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+/* PETITS TITRES INTERNES DORÉS ET CENTRÉS (POUR LA VEILLE) */
+.titre-interne-jaune {
+    text-align: center;
+    color: var(--gold-chic);
+    font-size: 1.2rem;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* PETITES BARRES DORÉES DE SURLIGNAGE SOUS LES TITRES */
+.titre-ligne {
+    width: 60px;
+    height: 3px;
+    background-color: var(--gold-chic);
+    margin: 10px auto 5px auto;
+    border-radius: 2px;
+}
+
+.titre-ligne-petit {
+    width: 40px;
+    height: 2px;
+    background-color: var(--gold-chic);
+    margin: 8px auto 20px auto;
+    border-radius: 2px;
+}
+
+/* ===================================================
+   3. EN-TÊTE / BARRE DE NAVIGATION
+   =================================================== */
+.entete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 80px;
+    padding: 10px 20px;
+    background-color: #20361c;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 3px solid var(--gold-chic);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo-img {
+    max-height: 55px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links a, .entete a { 
+    color: #f5f7f2; 
+    font-size: 1.1rem;
+    font-family: "Oswald", sans-serif;
+    padding: 5px 10px;
+    letter-spacing: 0.5px;
+}
+
+.entete a:hover {
+    color: var(--gold-chic);
+    transform: translateY(-2px);
+}
+
+#enteteBTS, #enteteStages, #enteteCertif, #enteteProjet, #enteteVeille, #enteteAccueil, #enteteContact {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+#enteteBTS:hover, #enteteStages:hover, #enteteCertif:hover, #enteteProjet:hover, #enteteVeille:hover, #enteteAccueil:hover, #enteteContact:hover {
+    transform: scale(1.1);
+}
+
+/* ===================================================
+   4. BLOC DE PRÉSENTATION (.MOI)
+   =================================================== */
+.moi {
+    max-width: 750px;
+    width: 90%;
+    margin: 40px auto;
+    background-color: var(--card-bg);
+    padding: 40px 30px;
+    color: var(--text-color);
+    text-align: center;
+    position: relative;
+    border: 2px solid var(--accent-color);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(46, 77, 39, 0.1);
+}
+
+.photo-profil {
+    width: 180px;
+    height: 180px;
+    border: 3px solid var(--gold-chic);
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(184, 151, 83, 0.3);
+}
+
+.moi p {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: var(--text-color);
+    font-size: 1.05rem;
+}
+
+/* BOUTONS D'ACTION (CTA) */
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.cta {
+    border: 2px solid var(--accent-color);
+    background-color: #f5f7f2;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 380px;
+    margin: 5px auto;
+}
+
+.cta a {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.95rem;
+    display: block;
+}
+
+.cta:hover {
+    background-color: var(--accent-color);
+    border-color: var(--gold-chic);
+    transform: translateY(-2px);
+}
+
+.cta:hover a {
+    color: white;
+}
+
+/* ===================================================
+   5. FRISE CHRONOLOGIQUE
+   =================================================== */
+.frise-chronologique {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+} 
+
+.frise-chronologique::before {
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: 40px;
+    right: 40px;
+    height: 4px;
+    background-color: var(--accent-color);
+    z-index: 0;
+}
+
+.etape {
+    position: relative;
+    flex: 1 1 200px;
+    text-align: center;
+    z-index: 1;
+}
+
+.date {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.point {
+    width: 20px;
+    height: 20px;
+    background-color: var(--gold-chic);
+    border: 4px solid var(--accent-color);
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.etape:hover .point {
+    background-color: var(--accent-light);
+    transform: scale(1.2);
+}
+
+.contenu {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    color: var(--text-color);
+}
+
+.contenu h3 {
+    margin-bottom: 8px;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+} 
+
+.contenu p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--text-color);
+}
+
+/* ===================================================
+   6. GRILLE DES COMPÉTENCES (BADGES MODERNES)
+   =================================================== */
+.categorie-competences {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.skill-badge {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-color);
+    padding: 10px 22px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.skill-badge img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.skill-badge:hover {
+    transform: translateY(-3px);
+    border-color: var(--gold-chic);
+    box-shadow: 0 6px 15px rgba(184, 151, 83, 0.25);
+}
+
+/* ===================================================
+   7. PAGE BTS & EN-TÊTES DE PAGES ENCADRÉS (.page-header)
+   =================================================== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
+header.page-header {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    margin: 30px 0;
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+header.page-header h1 {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.bts-section {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.bts-texte-intro {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-color);
+    max-width: 850px;
+    margin: 0 auto;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* STRUCTURE TABLEAUX BTS */
+.tableau-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.tableau-bts {
+    width: 100%;
+    max-width: 950px;
+    border-collapse: collapse;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* EN-TÊTES DE TABLEAUX AVEC ICÔNES */
+.tableau-bts th {
+    background-color: #20361c;
+    color: #f5f7f2;
+    padding: 16px;
+    font-family: "Oswald", sans-serif;
+    border-bottom: 3px solid var(--gold-chic);
+    width: 50%;
+}
+
+.th-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: left;
+}
+
+.th-icon {
+    font-size: 1.6rem;
+    color: var(--gold-chic);
+    background-color: rgba(184, 151, 83, 0.15);
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--gold-chic);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tableau-bts th strong {
+    font-size: 1.3rem;
+    color: var(--gold-chic);
+    letter-spacing: 1px;
+    display: block;
+    text-align: left;
+}
+
+.tableau-bts th span {
+    font-size: 0.85rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    display: block;
+    margin-top: 2px;
+    opacity: 0.9;
+    text-align: left;
+}
+
+/* CONTENU DES CELLULES */
+.tableau-bts td {
+    padding: 22px;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    vertical-align: top;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+/* LISTES À PUCE DORÉES POUR LES DÉBOUCHÉS */
+.tableau-bts ul.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tableau-bts ul.custom-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+
+.tableau-bts ul.custom-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--gold-chic);
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* ===================================================
+   8. PAGE PROJETS & VEILLE TECHNOLOGIQUE (CARTES)
+   =================================================== */
+.projets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 30px auto 50px auto;
+}
+
+.carte-projet {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--accent-color);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.carte-projet:hover {
+    transform: translateY(-6px);
+    border-top-color: var(--gold-chic);
+    box-shadow: 0 12px 25px rgba(184, 151, 83, 0.2);
+}
+
+.projet-image-box {
+    position: relative;
+    width: 100%;
+    height: 140px;
+    background-color: #20361c;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projet-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.carte-projet:hover .projet-img {
+    transform: scale(1.05);
+}
+
+.projet-badge-type {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: var(--gold-chic);
+    color: #20361c;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-family: 'Rubik', sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.projet-content {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: left;
+}
+
+.projet-content h3 {
+    color: var(--accent-color);
+    font-size: 1.3rem;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.projet-desc {
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.92rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.projet-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--accent-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.projet-btn {
+    width: 100%;
+    margin: 0;
+}
+
+/* ===================================================
+   9. PAGE CERTIFICATIONS (CARTES PROPRES & ALIGNÉES)
+   =================================================== */
+.certifs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 30px auto 50px auto;
+}
+
+.carte-certif {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-top: 4px solid var(--accent-color);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.carte-certif:hover {
+    transform: translateY(-6px);
+    border-top-color: var(--gold-chic);
+    box-shadow: 0 12px 25px rgba(184, 151, 83, 0.2);
+}
+
+.certif-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.certif-tag-org {
+    background-color: #20361c;
+    color: var(--gold-chic);
+    font-size: 0.75rem;
+    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+    padding: 4px 12px;
+    border-radius: 15px;
+    border: 1px solid var(--gold-chic);
+    letter-spacing: 0.5px;
+}
+
+.certif-status {
+    color: #2e7d32;
+    background-color: #e8f5e9;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 15px;
+    border: 1px solid #c8e6c9;
+}
+
+.certif-img-container {
+    width: 100%;
+    height: 140px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.certif-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.certif-body {
+    text-align: left;
+    flex: 1;
+}
+
+.certif-body h3 {
+    color: var(--accent-color);
+    font-family: "Oswald", sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+}
+
+.certif-orga {
+    color: var(--gold-chic);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.certif-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.certif-btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* ===================================================
+   10. PIED DE PAGE
+   =================================================== */
+.baspage {
+    background-color: #20361c;
+    border-top: 3px solid var(--gold-chic);
+    width: 100%;
+    padding: 30px 20px;
+    color: #f5f7f2;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-nom {
+    font-family: "Oswald", sans-serif;
+    color: var(--gold-chic);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.baspage p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}

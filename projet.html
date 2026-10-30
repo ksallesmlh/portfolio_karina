@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Karina S. - Projets</title>
+    <link rel="stylesheet" href="Portfolio Karina.css">
+</head>
+<body>
+
+    <!-- 1. BARRE DE NAVIGATION -->
+    <header class="entete">
+        <img src="MonLogoOfficiel.jpg" alt="Logo KSM" class="logo-img">
+        <nav class="nav-links">
+            <a href="index.html" id="enteteAccueil">Présentation</a>
+            <a href="BTS.html" id="enteteBTS">BTS</a>
+            <a href="projet.html" id="enteteProjet">Projets</a>
+            <a href="Certif.html" id="enteteCertif">Certifications</a>
+            <a href="VT.html" id="enteteVeille">Ma Veille Technologique</a>
+            <a href="stages.html" id="enteteStages">Stages</a>
+            <a href="MonContact.html" id="enteteContact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- 2. CONTENU PRINCIPAL -->
+    <main class="container">
+        
+        <header class="page-header">
+            <h1>Mes Projets Réalisés</h1>
+            <div class="titre-ligne"></div>
+        </header>
+
+        <section class="bts-section">
+            <h3 class="sous-titre-cat">Découvrez mes réalisations académiques et professionnelles</h3>
+            <div class="titre-ligne-petit"></div>
+        </section>
+
+        <!-- GRILLE DE PROJETS -->
+        <div class="projets-grid">
+
+            <!-- PROJET 1 : FREEFLIGHT TRAMPOLINE -->
+            <article class="carte-projet">
+                <div class="projet-image-box">
+                    <img src="logo_site_trampo.jpg" alt="Projet FreeFlight Jump" class="projet-img">
+                    <span class="projet-badge-type">Projet Académique</span>
+                </div>
+                <div class="projet-content">
+                    <h3>FreeFlight Trampoline</h3>
+                    <p class="projet-desc">
+                        Site marchand e-commerce développé avec base de données SQL pour la vente et réservation de trampolines. Gestion du compte client, catalogue produits et panier.
+                    </p>
+                    
+                    <div class="projet-techs">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+
+                    <!-- <div class="cta projet-btn">
+                        <a href="#">Voir les détails du projet</a>
+                    </div> -->
+                </div>
+            </article>
+
+            <!-- PROJET 2 : CARNIATO SUPPORT INFORMATIQUE -->
+            <article class="carte-projet">
+                <div class="projet-image-box">
+                    <img src="Capture d'écran site carniato.png" alt="Projet Carniato Support" class="projet-img">
+                    <span class="projet-badge-type">Stage 1re Année BTS</span>
+                </div>
+                <div class="projet-content">
+                    <h3>Carniato - Support Informatique</h3>
+                    <p class="projet-desc">
+                        Création d'un site web statique F.A.Q. composé de plusieurs pages pour répondre aux besoins et pannes informatiques fréquentes des salariés.
+                    </p>
+
+                    <div class="projet-techs">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+
+                    <!-- <div class="cta projet-btn">
+                        <a href="#">Consulter la FAQ Carniato</a>
+                    </div> -->
+                </div>
+            </article>
+
+            <!-- PROJET 3 : TP GLPI -->
+            <article class="carte-projet">
+                <div class="projet-image-box">
+                    <img src="GLPI.gif" alt="TP GLPI Administration" class="projet-img">
+                    <span class="projet-badge-type">TP Réseau & Système</span>
+                </div>
+                <div class="projet-content">
+                    <h3>Administration & Gestion TP GLPI</h3>
+                    <p class="projet-desc">
+                        Utilisation et configuration de l'outil GLPI en tant qu'administrateur : gestion des rôles, des comptes utilisateurs, inventaire du parc et gestion d'accès.
+                    </p>
+
+                    <div class="projet-techs">
+                        <span class="tech-tag">GLPI</span>
+                        <span class="tech-tag">Gestion de Parc</span>
+                        <span class="tech-tag">Droits & Accès</span>
+                    </div>
+
+                    <!-- <div class="cta projet-btn">
+                        <a href="#">Voir la documentation GLPI</a>
+                    </div> -->
+                </div>
+            </article>
+
+            <!-- PROJET 4 : VEILLE TECHNOLOGIQUE -->
+            <article class="carte-projet">
+                <div class="projet-image-box">
+                    <img src="IA-medecine.png" alt="Veille Technologique IA Médicale" class="projet-img">
+                    <span class="projet-badge-type">Veille Technologique</span>
+                </div>
+                <div class="projet-content">
+                    <h3>IA dans le domaine Médical</h3>
+                    <p class="projet-desc">
+                        Travail de recherche approfondi sur l'apport et l'évolution de l'Intelligence Artificielle dans la santé et le diagnostic médical.
+                    </p>
+
+                    <div class="projet-techs">
+                        <span class="tech-tag">IA / Santé</span>
+                        <span class="tech-tag">Recherche</span>
+                        <span class="tech-tag">Analyse</span>
+                    </div>
+
+                    <div class="cta projet-btn">
+                        <a href="VT.html">Accéder au dossier de Veille</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </main>
+
+    <!-- 3. PIED DE PAGE -->
+    <footer class="baspage">
+        <p class="footer-nom">Karina Salles Milheiro</p>
+        <p>Étudiante en Développement Web — BTS SIO SLAM</p>
+        <p class="copyright">© 2025, Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>

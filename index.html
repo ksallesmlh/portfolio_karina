@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- Balise viewport indispensable pour le rendu mobile / responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Karina S.</title>
+    
+    <!-- Lien vers ton fichier CSS -->
+    <link rel="stylesheet" href="Portfolio Karina.css">
+</head>
+<body>
+
+    <!-- 1. EN-TÊTE ET BARRE DE NAVIGATION -->
+    <header class="entete">
+        <img src="MonLogoOfficiel.jpg" alt="Logo KSM" class="logo-img">
+        <nav class="nav-links">
+            <a href="index.html" id="enteteAccueil">Présentation</a>
+            <a href="BTS.html" id="enteteBTS">BTS</a>
+            <a href="projet.html" id="enteteProjet">Projet</a>
+            <a href="Certif.html" id="enteteCertif">Certifications</a>
+            <a href="VT.html" id="enteteVeille">Ma Veille Technologique</a>
+            <a href="stages.html" id="enteteStages">Stages</a>
+            <a href="MonContact.html" id="enteteContact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- 2. BLOC DE PRÉSENTATION -->
+    <section class="moi">
+        <img src="pdp.jpg" alt="Photo de Karina Salles" class="photo-profil">
+        
+        <p>
+            Je me présente, je m'appelle <strong>Karina Salles Milheiro</strong>. 
+            Je suis en deuxième année de BTS SIO (Services Informatiques aux Organisations) option SLAM 
+            (Solutions Logicielles et Applications Métiers) au sein du lycée du Parc des Loges à Évry-Courcouronnes. 
+            Voici mon portfolio, vous y trouverez mes études, mes certifications, ma veille technologique ainsi que les projets professionnels que j'ai pu entreprendre.
+        </p>
+        
+        <!-- BOUTONS D'ACTION (CV) -->
+        <div class="cta-container">
+            <div class="cta">
+                <a href="CV.html">Voir mon CV HTML</a>
+            </div>
+            <div class="cta">
+                <a href="CV Stage 2027 Karina SALLES MILHEIRO.pdf" target="_blank">Télécharger mon CV</a>
+            </div>
+            <div class="cta">
+                <a href="CV_ATS_Karina_Salles_Milheiro_stage_5semaines.pdf" target="_blank">Télécharger mon CV au format ATS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PARCOURS (FRISE CHRONOLOGIQUE) -->
+    <h2 class="titre-section">Mon parcours</h2>
+    
+    <div class="frise-chronologique">
+        <div class="etape">
+            <div class="date">2023</div>
+            <div class="point"></div>
+            <div class="contenu">
+                <h3>Formation SNU</h3>
+                <p>Séjour de cohésion dans le Tarn (81) de 15 jours</p>
+            </div>
+        </div>
+        
+        <div class="etape">
+            <div class="date">2023 - 2024</div>
+            <div class="point"></div>
+            <div class="contenu">
+                <h3>Stage de Gendarmerie</h3>
+                <p>À Évry (91) (12 jours/84h) - Découverte du métier</p>
+            </div>
+        </div>
+        
+        <div class="etape">
+            <div class="date">Juillet 2025</div>
+            <div class="point"></div>
+            <div class="contenu">
+                <h3>Baccalauréat</h3>
+                <p>STMG option SIG (Systèmes d’Information et de Gestion)</p>
+            </div>
+        </div>
+
+        <div class="etape">
+            <div class="date">2025 - 2026</div>
+            <div class="point"></div>
+            <div class="contenu">
+                <h3>BTS SIO 1e Année</h3>
+                <p>Bases développement web & réseaux (PHP/SQL)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. MES COMPÉTENCES (BADGES MODERNES) -->
+    <h2 class="titre-section">Mes compétences</h2>
+
+    <div class="categorie-competences">
+        <h3 class="sous-titre-cat">Développement</h3>
+        
+        <h4 class="sous-titre-subcat">Front-end</h4>
+        <div class="skills-grid">
+            <div class="skill-badge"><img src="html.png" alt="HTML"> HTML</div>
+            <div class="skill-badge"><img src="css.png" alt="CSS"> CSS</div>
+            <div class="skill-badge"><img src="js.png" alt="JavaScript"> JavaScript</div>
+        </div>
+
+        <h4 class="sous-titre-subcat">Back-end</h4>
+        <div class="skills-grid">
+            <div class="skill-badge"><img src="java.png" alt="Java"> Java</div>
+            <div class="skill-badge"><img src="mysql.jpg" alt="SQL"> SQL</div>
+            <div class="skill-badge"><img src="php.png" alt="PHP"> PHP</div>
+            <div class="skill-badge"><img src="python.jpg" alt="Python"> Python</div>
+        </div>
+    </div>
+
+    <div class="categorie-competences">
+        <h3 class="sous-titre-cat">Réseau & Sécurité</h3>
+        <div class="skills-grid">
+            <div class="skill-badge"><img src="cisco.png" alt="Cisco"> Cisco Packet Tracer</div>
+            <div class="skill-badge"><img src="VM.png" alt="VirtualBox"> VirtualBox</div>
+            <div class="skill-badge"><img src="cybersecu.png" alt="Cybersécurité"> Cybersécurité</div>
+        </div>
+    </div>
+
+    <div class="categorie-competences">
+        <h3 class="sous-titre-cat">Pack Office & Outils</h3>
+        <div class="skills-grid">
+            <div class="skill-badge"><img src="word.png" alt="Word"> Word</div>
+            <div class="skill-badge"><img src="excel.jpg" alt="Excel"> Excel</div>
+            <div class="skill-badge"><img src="pp.png" alt="PowerPoint"> PowerPoint</div>
+            <div class="skill-badge"><img src="canva.png" alt="Canva"> Canva</div>
+            <div class="skill-badge"><img src="capcut.jpg" alt="CapCut"> CapCut</div>
+        </div>
+    </div>
+
+    <!-- 5. PIED DE PAGE -->
+    <footer class="baspage">
+        <p class="footer-nom">Karina Salles Milheiro</p>
+        <p>Étudiante en Développement Web — BTS SIO SLAM</p>
+        <p class="copyright">© 2025, Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>
